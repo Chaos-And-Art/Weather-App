@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:popupTheme="@style/AppTheme">
+
+    <TextView
+        android:id="@+id/toolBar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/app_name"
+        android:textSize="35sp"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        android:gravity="center_vertical"/>
+
+    </Toolbar>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolBar"
+        android:background="#FFFF" />
+
+    <LinearLayout
+        android:id="@+id/weather_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:id="@+id/temp_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|end"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:text="°F"
+            android:textStyle="bold"
+            android:textColor="#FFFF"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-36dp"
+            android:gravity="center_horizontal"
+            android:text="75"
+            android:textColor="#FFFF"
+            android:textSize="90sp" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seattle"
+            android:textColor="#FFFF"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/weather_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sunny"
+            android:textColor="#FFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/condition_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wi_cloudy" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="#FFFF"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="25dp"
+        android:gravity="bottom">
+
+        <EditText
+            android:id="@+id/location_field"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:backgroundTint="#FFFF"
+            android:hint="Enter a Location"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#FFFF"
+            android:textColorHint="#FFFF"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/refresh_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/search_button"
+            android:src="@drawable/ic_refresh"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
